@@ -1,0 +1,24 @@
+
+<div class="hero-unit">
+  <h1>Customers Details</h1>
+  <span>Click on buttons to Add / Edit </span>
+  <button class="btn btn-primary" style="float:right" (click)="addCustomer()">Add New Customers</button>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let el of customers; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{el.name}}</td>
+      <td>{{el.phone_number}}</td>
+      <td>{{el.address}}</td>
+      <td>{{el.email}}</td>
+      <td><button class="btn btn-primary" style="margin-right:5px;" (click)="delCustomer(i)">Delete</button><button class="btn btn-success" (click)="editCustomer(i)">Edit</button> </td>
+    </tr>
+  </tbody>
+</table>

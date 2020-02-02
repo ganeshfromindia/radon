@@ -1,0 +1,68 @@
+h1.login100-form-title {
+    text-align: center;
+    color: #ca5b5b;
+}
+
+.wrap-input100.validate-input {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+input:focus {
+	outline: none;
+}
+
+input.input100 {
+    height: 100px;
+    padding-top: 75px;
+    border: none;
+    border-bottom: 1px solid #a9a3a3;
+    width: 300px;
+}
+
+
+.contact100-form-checkbox {
+    width: 300px;
+    margin: 20px auto;
+}
+
+.container-login100-form-btn {
+    width: 275px;
+    float: right;
+}
+
+button.login100-form-btn {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button[disabled] {
+	opacity: 0.5;
+}
+
+.error-message {
+    color: #ef3636;
+    margin-top: 15px;
+}
+

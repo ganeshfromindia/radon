@@ -1,0 +1,40 @@
+<form class="form-container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+	<h1 class="login100-form-title">
+		Log in
+	</h1>
+	<div formGroupName="userData">
+		<div class="wrap-input100 validate-input" >
+			<input class="input100" type="text" formControlName="username" placeholder="Username" >
+			<div class="error-message"
+              *ngIf="!loginForm.get('userData.username').valid && loginForm.get('userData.username').touched"
+              >
+              <span *ngIf="loginForm.get('userData.username').errors['required']">This field is required!</span>
+
+            </div>
+
+		</div>
+
+		<div class="wrap-input100 validate-input" >
+			<input class="input100" type="password" formControlName="pass" placeholder="Password" >
+			<div class="error-message"
+              *ngIf="!loginForm.get('userData.pass').valid && loginForm.get('userData.pass').touched"
+              >
+              <span *ngIf="loginForm.get('userData.pass').errors['required']">This field is required!</span>
+
+            </div>
+			
+		</div>
+	</div>
+	<div class="contact100-form-checkbox">
+		<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+		<label class="label-checkbox100" for="ckb1">
+			Remember me
+		</label>
+	</div>
+
+	<div class="container-login100-form-btn">
+		<button class="login100-form-btn" [disabled]="!loginForm.valid">
+			Login
+		</button>
+	</div>
+</form>

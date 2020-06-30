@@ -1,0 +1,49 @@
+<form class="form-container" [formGroup]="alteraddCustomer" (ngSubmit)="onSubmit()" *ngIf="showFormAddEdit">
+	<h1 class="login100-form-title">
+		{{ page_scope }}
+	</h1>
+		<div class="wrap-input100 validate-input" >
+			<input class="input100" type="text" formControlName="name" placeholder="Username"  [value]="customer.name" >
+			<div class="error-message"
+              *ngIf="!alteraddCustomer.get('name').valid && alteraddCustomer.get('name').touched"
+              >
+              <span *ngIf="alteraddCustomer.get('name').errors['required']">Please enter username  </span>
+
+            </div>
+
+		</div>
+
+		<div class="wrap-input100 validate-input" >
+			<input class="input100" type="number" formControlName="phone_number" placeholder="Phone Number" [value]="customer.phone_number" >
+			<div class="error-message"
+              *ngIf="!alteraddCustomer.get('phone_number').valid && alteraddCustomer.get('phone_number').touched"
+              >
+              <span *ngIf="alteraddCustomer.get('phone_number').errors['required']">Please enter phone number</span>
+            </div>
+			
+		</div>
+
+		<div class="wrap-input100 validate-input" >
+			<textarea class="input100" type="text" formControlName="address"  [value]="customer.address" ></textarea>
+		</div>
+
+		<div class="wrap-input100 validate-input" >
+			<input class="input100" type="email" formControlName="email" placeholder="EMail"  [value]="customer.email" email>
+			<div class="error-message"
+              *ngIf="!alteraddCustomer.get('email').valid && alteraddCustomer.get('email').touched"
+              >
+              <span *ngIf="alteraddCustomer.get('email').errors">Please enter proper Email ID</span>
+
+            </div>
+			
+		</div>
+
+	<div class="container-login100-form-btn">
+		<button class="login100-form-btn" [disabled]="!alteraddCustomer.valid">
+			{{ userRole }}
+		</button>
+	</div>
+</form>
+<div *ngIf="loader" class="loader">
+	<img [src]="imagePath" alt="loading gif" />
+</div> 
